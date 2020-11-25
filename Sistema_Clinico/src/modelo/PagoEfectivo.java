@@ -15,8 +15,18 @@ public class PagoEfectivo implements Pago{
     
     @Override
     public boolean realizarPago(float monto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.monto>=monto){
+            this.monto -= monto;
+            return true;
+        }
+        return false;
     }
-    
-    
+
+    public float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(float monto) {
+        this.monto = monto;
+    }
 }

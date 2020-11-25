@@ -16,7 +16,27 @@ public class PagoPayPal implements Pago {
     
     @Override
     public boolean realizarPago(float monto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.monto>=monto){
+            this.monto -= (monto+(monto*0.054)+0.30);
+            return true;
+        }
+        return false;
+    }
+
+    public float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(float monto) {
+        this.monto = monto;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }

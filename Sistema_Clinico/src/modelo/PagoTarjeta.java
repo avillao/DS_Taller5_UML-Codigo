@@ -21,7 +21,51 @@ public class PagoTarjeta implements Pago {
     
     @Override
     public boolean realizarPago(float monto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.monto>=monto){
+            this.monto -= (monto+(monto*0.006));
+            return true;
+        }
+        return false;
+    }
+
+    public float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(float monto) {
+        this.monto = monto;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public Date getExpira() {
+        return expira;
+    }
+
+    public void setExpira(Date expira) {
+        this.expira = expira;
+    }
+
+    public String getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(String propietario) {
+        this.propietario = propietario;
+    }
+
+    public String getBanco() {
+        return banco;
+    }
+
+    public void setBanco(String banco) {
+        this.banco = banco;
     }
     
 }

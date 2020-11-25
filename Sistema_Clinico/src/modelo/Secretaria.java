@@ -13,9 +13,28 @@ public class Secretaria extends Persona{
     
     protected Doctor doctor;
     
-    public void verificarCita(){
+    public boolean verificarCita(){
+        return doctor.getCitasPendientes().isEmpty();
     }
     
-    public void agendarCita(){
+    public boolean agendaCita(){
+        return false;
     }
+    
+    public boolean agendarCita(Cita cita){
+        if(doctor.getCitasPendientes().contains(cita)) return false;
+        cita.setPagada(false);
+        doctor.getCitasPendientes().add(cita);
+        return true;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+    
+    
 }
