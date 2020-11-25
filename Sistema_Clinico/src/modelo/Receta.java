@@ -12,7 +12,7 @@ import javax.print.attribute.standard.DateTimeAtCreation;
  *
  * @author le
  */
-class Receta {
+public class Receta {
     
     protected DateTimeAtCreation fecha;
     

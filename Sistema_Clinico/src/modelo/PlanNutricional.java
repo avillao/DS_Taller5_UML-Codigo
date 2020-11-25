@@ -9,7 +9,7 @@ package modelo;
  *
  * @author le
  */
-class PlanNutricional {
+public class PlanNutricional {
     
     protected String descripcion;
 

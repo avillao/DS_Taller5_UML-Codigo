@@ -27,10 +27,7 @@ public class Cita {
     }
     
     public void realizarPago(Pago pago){
-        float valor = 0.0f;
-        if(pago instanceof PagoPayPal) valor = ((PagoPayPal) pago).getMonto();
-        if(pago instanceof PagoEfectivo) valor = ((PagoEfectivo) pago).getMonto();
-        if(pago instanceof PagoTarjeta) valor = ((PagoTarjeta) pago).getMonto();
+        float valor = doctor.getArea().getCosto();
         pagada = pago.realizarPago(valor);
     }
 

@@ -13,7 +13,7 @@ import javax.print.attribute.standard.DateTimeAtCreation;
  *
  * @author le
  */
-class Doctor extends Persona{
+public class Doctor extends Persona{
     
     protected int regDoctor;
     protected String especialidad;
